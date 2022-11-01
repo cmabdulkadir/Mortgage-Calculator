@@ -27,5 +27,7 @@ public class MortgageCalculator {
         double monthlyPayment = principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)/(Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1));
         System.out.println("Monthly payments: " + NumberFormat.getCurrencyInstance().format(monthlyPayment));
 
+        //Total loan payback amount
+        System.out.println("Total payback amount: " + NumberFormat.getCurrencyInstance().format(monthlyPayment * numberOfPayments));
     }
 }
